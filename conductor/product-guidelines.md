@@ -1,21 +1,15 @@
-# Product Guidelines
+# Product Guidelines: OPCUACS
 
-## Content Style
-- **Tone:** Professional, clear, concise, and technical.
-- **Language:** English (US).
-- **Terminology:** Use standard OPC UA terminology. Avoid jargon where simpler, clear terms can be used without loss of precision.
-- **Documentation:** All public APIs and significant internal components must be thoroughly documented with docstrings, inline comments, and examples.
+## Tone and Style
+- **Professional & Technical**: Documentation and system messages should be precise, technically accurate, and use standard industrial automation terminology. Avoid colloquialisms and maintain an authoritative, yet accessible, tone.
 
-## Branding
-- **Project Name:** OPCUACS (OPC UA Client Server)
-- **Logos/Icons:** (To be defined, if applicable)
-- **External Communications:** Maintain a consistent, professional image.
+## UI/UX Principles
+- **Responsive & Real-time**: The UIX Explorer must provide immediate visual feedback on connection states, data updates, and system health to ensure operators have up-to-the-second information.
+- **Data Density Focused**: Interfaces should be optimized to display large numbers of OPC UA nodes and tags without overwhelming the user. Use clear hierarchies, collapsible sections, and efficient data tables.
+- **Simple & Intuitive**: Configuration workflows should follow a logical, step-by-step path, making even complex setups feel straightforward and manageable.
 
-## User Experience (UX) Principles
-- **Simplicity:** APIs should be straightforward and easy to understand for developers.
-- **Consistency:** Maintain consistent naming conventions, argument orders, and error handling across the client and server implementations.
-- **Error Handling:** Provide clear, actionable error messages and handle exceptions gracefully.
-- **Performance Feedback:** Where applicable, provide mechanisms for users to understand performance characteristics (e.g., logging, metrics).
-- **Extensibility:** Design the architecture to allow for future expansion and integration of new OPC UA features or custom functionalities.
-- **Security by Design:** Prioritize security considerations from the outset, ensuring secure defaults and clear guidance on configuring secure connections.
-- **Configuration:** Provide clear and flexible configuration options for both client and server components.
+## Error Handling & Feedback
+- **Action-Oriented**: Errors should not just report what went wrong, but also provide clear, actionable steps for resolution. Where possible, suggest specific configuration changes or diagnostic tests to resolve the issue.
+
+## Branding & Visual Identity
+- **Modern & Industrial**: The overall aesthetic should reflect high-performance engineering. Use a clean, modern design with a palette that conveys stability, reliability, and precision.

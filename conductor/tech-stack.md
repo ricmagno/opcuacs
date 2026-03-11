@@ -1,30 +1,18 @@
-# Tech Stack
+# Technology Stack: OPCUACS
 
-## Programming Language
-- **Python:**
-    - **Version:** Python 3.9+ (latest stable version recommended for security and features)
-    - **Reasoning:** Chosen explicitly by the user, Python offers a rich ecosystem, excellent readability, and strong community support, making it ideal for rapid development and maintenance in industrial automation.
+## Backend (The Engine)
+- **Rust (Stable)**: Primary language for its performance, memory safety, and low resource footprint.
+- **Tokio**: Asynchronous runtime for handling multiple high-performance OPC UA connections.
+- **open62541-rust**: High-performance Rust wrapper for the open62541 OPC UA implementation.
 
-## Core Libraries/Frameworks
-- **asyncio (Python Standard Library):**
-    - **Reasoning:** For handling asynchronous I/O, critical for non-blocking communication in OPC UA clients and servers, ensuring responsiveness and efficient resource utilization.
-- **python-opcua (Client & Server):**
-    - **Reasoning:** A well-established open-source OPC UA library for Python. It provides the necessary functionalities to implement both OPC UA client and server roles, abstracting away the complexities of the OPC UA specification.
+## Frontend (UIX Explorer)
+- **React**: Modern component-based library for building the web interface.
+- **Vite**: Fast development tool and bundler for the web UI.
 
-## Data Storage (for Server-side persistence, if needed)
-- **SQLite (Python Standard Library):**
-    - **Reasoning:** Lightweight, file-based database, suitable for local persistence of server configurations, historical data, or user management without requiring external database server setup. Good for proof-of-concept and smaller deployments.
-- **PostgreSQL (with SQLAlchemy ORM):**
-    - **Reasoning:** For more robust and scalable data persistence needs, especially for larger industrial deployments requiring transactional integrity, complex queries, and concurrent access. SQLAlchemy provides an ORM for Python, simplifying database interactions.
+## Infrastructure & Orchestration
+- **Docker**: Containerization for consistent deployment across environments.
+- **Kubernetes**: Orchestration for scaling, resilience, and management of the OPC UA client and server nodes.
 
-## Development Tools
-- **Poetry / pipenv:**
-    - **Reasoning:** For dependency management and virtual environment creation, ensuring reproducible builds and isolating project dependencies.
-- **pytest:**
-    - **Reasoning:** A powerful and flexible testing framework for Python, essential for writing comprehensive unit and integration tests.
-- **black / ruff:**
-    - **Reasoning:** Code formatters/linters to maintain consistent code style and enforce best practices across the codebase.
-
-## Deployment & Containerization
-- **Docker:**
-    - **Reasoning:** For containerizing the OPC UA client and server applications, providing isolated, portable, and consistent environments for development, testing, and deployment across various industrial computing platforms.
+## Communication Patterns
+- **API First**: RESTful and WebSocket-based communication between the Rust backend and the web frontend.
+- **Direct OPC UA**: Native communication with industrial PLCs and SCADA systems using the OPC UA protocol.

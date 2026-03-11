@@ -1,53 +1,22 @@
-# Initial Concept
-I want to build an OPC UA Client and Server in Python for industrial automation.
+# Product Definition: OPCUACS
 
-# Product Definition
+## Overview
+OPCUACS is a high-performance, lightweight OPC UA Client and Server designed for modern industrial automation and cloud-native environments. Built with Rust, it provides exceptional speed and memory safety while maintaining a small footprint for containerized deployment in Kubernetes.
 
-## Vision
-To provide a robust, flexible, and easy-to-use Python-based OPC UA Client and Server solution that facilitates seamless communication and data exchange within industrial automation environments, enhancing interoperability and enabling advanced control strategies.
+## Target Audience
+- **Automation Engineers**: Professionals who need to configure and monitor industrial data streams between PLCs and higher-level systems.
+- **SCADA Operators**: Users managing industrial processes via SCADA, Matlab, or other monitoring utilities.
 
-## Goals
-- Develop a full-featured OPC UA Client capable of connecting to, browsing, reading from, writing to, and subscribing to data changes on OPC UA Servers.
-- Develop a full-featured OPC UA Server capable of exposing process data, handling client connections, and managing subscriptions.
-- Ensure high performance and reliability for critical industrial applications.
-- Provide comprehensive documentation and examples for ease of adoption and use.
-- Support common OPC UA security policies and mechanisms.
-- Facilitate integration with existing Python ecosystems and industrial control systems.
-
-## Target Users
-- Industrial automation engineers
-- PLC programmers
-- SCADA/HMI developers
-- Data scientists working with industrial data
-- System integrators
-- Researchers and developers in industrial IoT
+## Core Goals
+1.  **Performance & Efficiency**: Optimized for low-resource container environments, ensuring minimal overhead and fast execution.
+2.  **Cloud Native Readiness**: Seamless deployment, orchestration, and management within Kubernetes ecosystems.
+3.  **Ease of Use**: An intuitive web-based interface (UIX Explorer) for effortless configuration and real-time monitoring.
 
 ## Key Features
+- **High-Performance Backend**: A robust Rust-based engine handling the complex OPC UA protocol with reliability and speed.
+- **Web UIX Explorer**: A modern, web-based interface to manage connections, explore tags, and monitor system status.
+- **Secure Connectivity**: Full support for standard OPC UA security policies, including X509 certificates and encrypted channels.
 
-### OPC UA Client
-- Connect/disconnect to OPC UA Servers securely.
-- Browse server address space.
-- Read/write node values (single and multiple).
-- Subscribe to data changes (data access and alarms & conditions).
-- Call methods on OPC UA Servers.
-- Support for various data types.
-- Error handling and robust connection management.
-
-### OPC UA Server
-- Expose custom address space.
-- Manage client sessions and subscriptions.
-- Handle read/write requests from clients.
-- Implement methods callable by clients.
-- Publish data changes to subscribed clients.
-- User authentication and authorization.
-- Event and alarm generation.
-
-## Non-Functional Requirements
-- **Performance:** Low latency for data exchange, high throughput for numerous data points.
-- **Reliability:** Stable operation, fault tolerance, and automatic reconnection capabilities.
-- **Security:** Adherence to OPC UA security specifications (encryption, authentication, authorization).
-- **Scalability:** Ability to handle a growing number of clients, nodes, and data points.
-- **Maintainability:** Clean, modular, and well-documented codebase.
-- **Usability:** Intuitive API design for Python developers.
-- **Compatibility:** Adherence to OPC UA specifications to ensure interoperability with other OPC UA products.
-- **Portability:** Cross-platform compatibility (Linux, Windows, etc.).
+## Constraints & Requirements
+- **Low Resource Usage**: The system must maintain a small binary size and minimal memory footprint, making it ideal for edge computing and cloud-native deployments.
+- **Safety First**: Leverage Rust’s memory safety and concurrency primitives to ensure a stable and secure system.

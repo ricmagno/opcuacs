@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Implement Core OPC UA Client and Server Functionality**
-  *Link: [./tracks/implement_core_opc_ua_client_server_functionality_20260311/](./tracks/implement_core_opc_ua_client_server_functionality_20260311/)*
+- [ ] **Track: Setup the CI/CD pipeline.**
+  *Link: [./conductor/tracks/setup_cicd_20260311/](./conductor/tracks/setup_cicd_20260311/)*
