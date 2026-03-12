@@ -13,3 +13,7 @@
 ## 2026-03-11: Conductor Workflow Adoption
 - **Context**: Need a structured, auditable workflow for task management.
 - **Decision**: Adopt the Conductor system with `plan.md`, tracks, and phased checkpoints.
+## 2026-03-11: Choice of OPC UA Library
+- **Context**: Need a high-performance, lightweight library for PLC connectivity.
+- **Decision**: Use `open62541-rust`.
+- **Rationale**: Follows `AGENTS.md` guidelines and leverages the mature, industry-standard `open62541` C library foundation, which is highly interoperable with PLCs.

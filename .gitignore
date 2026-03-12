@@ -19,3 +19,7 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# Local Dev
+engine/config.json
+engine/verify_server.py
